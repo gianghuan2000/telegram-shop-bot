@@ -2,8 +2,6 @@ require('dotenv').config()
 
 const { Telegraf, Markup } = require('telegraf')
 
-console.log(process.env.BOT_TOKEN)
-
 const bot = new Telegraf(process.env.BOT_TOKEN)
 
 // DATABASE TẠM
