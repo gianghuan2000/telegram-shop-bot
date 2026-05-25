@@ -2,7 +2,13 @@ require('dotenv').config()
 
 const { Telegraf, Markup } = require('telegraf')
 
-const bot = new Telegraf(process.env.BOT_TOKEN)
+const token = process.env.BOT_TOKEN
+
+if (!token) {
+    throw new Error('BOT TOKEN KHÔNG TỒN TẠI')
+}
+
+const bot = new Telegraf(token)
 
 // DATABASE TẠM
 const users = {}
